@@ -12,7 +12,15 @@
 ## 6. Referencias
 
 ## Licencia
-La documentación y materiales originales de este repositorio se distribuyen bajo la licencia
-[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
+
+La documentación, diagramas, scripts y código de laboratorio se proporcionan
+exclusivamente con fines educativos y de investigación autorizada.
 
 El código de laboratorio se distribuye bajo la licencia MIT, salvo que se indique lo contrario.
+## Uso responsable
+
+Este repositorio contiene materiales destinados exclusivamente a aprendizaje,
+investigación y análisis en entornos controlados o con autorización explícita.
+No debe utilizarse para analizar, probar o atacar sistemas, binarios, redes o
+servicios sin autorización previa y documentada de su propietario.
