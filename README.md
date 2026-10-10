@@ -1,6 +1,5 @@
-# From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra-CVE
-
-# Metodología de Análisis de Vulnerabilidades y Explotación
+# From-Patch-to-Root-CVE
+# Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra
 
 ## 1. Introducción
 ## 2. Metodología técnica
@@ -18,6 +17,7 @@ La documentación, diagramas, scripts y código de laboratorio se proporcionan
 exclusivamente con fines educativos y de investigación autorizada.
 
 El código de laboratorio se distribuye bajo la licencia MIT, salvo que se indique lo contrario.
+
 ## Uso responsable
 
 Este repositorio contiene materiales destinados exclusivamente a aprendizaje,
