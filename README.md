@@ -1,10 +1,10 @@
 # From-Patch-to-Root-CVE
 # Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra
 
-![texto alternativo](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/blob/main/images/reverse-engineering-con-Ghidra.jpg)
-![texto alternativo](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/blob/main/images/.jpg)
+![Ghidra](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/blob/main/images/reverse-engineering-con-Ghidra.jpg)
+![Diaphora](<img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/f577cbc0-b683-4993-bb02-ead2ceacf7bd" />)
 
-<img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/f577cbc0-b683-4993-bb02-ead2ceacf7bd" />
+
 
 
 ## 1. Introducción
