@@ -2,8 +2,9 @@
 # Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra
 
 ![Ghidra](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/blob/main/images/reverse-engineering-con-Ghidra.jpg)
-[Linea Inviseble]: # (Diaphora) <img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/f577cbc0-b683-4993-bb02-ead2ceacf7bd" />
+[Línea invisible]: # (Diaphora) <img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/f577cbc0-b683-4993-bb02-ead2ceacf7bd" />
 
+[Línea invisible]: # (Este texto es un comentario oculto)
 
 ## 1. Introducción
 Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos
