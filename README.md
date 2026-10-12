@@ -1,7 +1,7 @@
 # From-Patch-to-Root-CVE
 # Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra
 
-https://www.campusciberseguridad.com/wp-content/uploads/2026/05/reverse-engineering-con-Ghidra.jpg
+(https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/tree/main/images/reverse-engineering-con-Ghidra.jpg)
 
 ## 1. Introducción
 Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos
