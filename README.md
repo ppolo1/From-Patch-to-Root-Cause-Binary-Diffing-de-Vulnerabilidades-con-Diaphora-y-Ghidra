@@ -9,6 +9,7 @@
 ## 4. Enfoque ante 0days
 ## 5. Conclusiones
 ## 6. Referencias
+Todas las referencias se pueden encontrar aquí [Referencias]()
 
 ## Licencia
 Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
