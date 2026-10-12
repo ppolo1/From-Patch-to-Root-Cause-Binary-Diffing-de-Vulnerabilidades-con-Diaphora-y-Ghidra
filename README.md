@@ -2,6 +2,8 @@
 # Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra
 
 ## 1. Introducción
+Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos
+
 ## 2. Metodología técnica
 ## 3. Casos prácticos
   ### 3.1 Caso 1 — [nombre]
