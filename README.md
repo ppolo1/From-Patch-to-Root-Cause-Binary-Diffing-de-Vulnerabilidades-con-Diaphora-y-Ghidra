@@ -11,13 +11,17 @@
 Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos.
 
 ## 2. Metodología técnica
-Se usarán dos máquinas virtuales. Una Kali Linux desde la cual se atacará un servicoi 
+Se usarán dos máquinas virtuales. Una Kali Linux desde la cual se atacará un servicio, haciendo uso de las herramientas Ghidra Y Diaphora
 
 ## 3. Casos prácticos
   ### 3.1 Caso 1 — [nombre]
   ### 3.2 Caso 2 — [nombre]
+  
 ## 4. Enfoque ante 0days
+
 ## 5. Conclusiones
+Como conclusión final, 
+
 ## 6. Referencias
 Todas las referencias usadas en este proyeto se pueden encontrar en el apartado [referencias](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/tree/main/references)
 
