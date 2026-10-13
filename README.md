@@ -8,7 +8,7 @@
 <img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/f577cbc0-b683-4993-bb02-ead2ceacf7bd" />
 
 ## 1. Introducción
-Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos
+Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos.
 
 ## 2. Metodología técnica
 ## 3. Casos prácticos
@@ -17,7 +17,7 @@ Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos
 ## 4. Enfoque ante 0days
 ## 5. Conclusiones
 ## 6. Referencias
-Todas las referencias se pueden encontrar aquí [Referencias](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/tree/main/references)
+Todas las referencias usadas en este proyeto se pueden encontrar en el apartado [referencias](https://github.com/ppolo1/From-Patch-to-Root-Cause-Binary-Diffing-de-Vulnerabilidades-con-Diaphora-y-Ghidra/tree/main/references)
 
 ## Licencia
 Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
