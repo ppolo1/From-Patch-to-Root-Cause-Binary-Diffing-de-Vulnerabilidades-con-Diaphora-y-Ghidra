@@ -11,6 +11,8 @@
 Voy a mostrar el uso de las herramientas Diaphora y Ghidra con casos prácticos.
 
 ## 2. Metodología técnica
+Se usarán dos máquinas virtuales. Una Kali Linux desde la cual se atacará un servicoi 
+
 ## 3. Casos prácticos
   ### 3.1 Caso 1 — [nombre]
   ### 3.2 Caso 2 — [nombre]
