@@ -1,15 +1,37 @@
-# Referencia rápida
+# Cheat sheet: patch diffing local
 
-Estado: operaciones propuestas; completar con capturas de las versiones utilizadas.
+**Estado:** guía orientativa. Completa las capturas y versiones tras ejecutar los pasos.
 
-| Necesidad | Acción | Precaución |
-|---|---|---|
-| Compilar | sh lab/build.sh | Revisar avisos y registrar entorno |
-| Probar regresión | python3 lab/tests/check.py | No prueba explotación ni todas las entradas |
-| Verificar hashes | cd lab/build && sha256sum -c SHA256SUMS | Volver a la raíz antes de otros comandos |
-| Localizar el cambio | Revisar copy_input en Ghidra | Direcciones dependientes del binario |
-| Comparar | Exportar con Diaphora desde IDA compatible | No importar directamente proyectos de Ghidra |
-| Revisar SQLite | Usar las exportaciones de Diaphora | No confundirlas con IDB/I64 |
-| Interpretar | Contrastar función, ensamblador y ruta de error | Similitud no equivale a vulnerabilidad |
+## Antes de comparar
 
-Conserva hash, versión, opciones y evidencia de cada observación. Detén el flujo si no se ha verificado compatibilidad. Fuente: https://github.com/joxeankoret/diaphora
+- [ ] Confirmar que los binarios son propios o autorizados.
+- [ ] Registrar compilador, arquitectura, opciones y hashes.
+- [ ] Verificar compatibilidad entre IDA y Diaphora.
+- [ ] Recordar que Diaphora es un plugin de IDA; no asumir integración directa con Ghidra.
+
+## Comandos del laboratorio
+
+```sh
+sh lab/build.sh
+python3 lab/tests/check.py
+(cd lab/build && sha256sum -c SHA256SUMS)
+```
+
+Ejecuta las pruebas solo después de compilar correctamente y comprueba la salida real.
+
+## Ruta de análisis
+
+1. Importar ambos binarios en Ghidra y confirmar arquitectura.
+2. Revisar la función de copia y la comprobación de longitud.
+3. Si IDA compatible está disponible, abrir ambos binarios y esperar al autoanálisis.
+4. Usar la exportación/comparación SQLite de Diaphora según su versión instalada.
+5. Revisar cambios y contrastarlos manualmente con Ghidra y el código fuente.
+6. Relacionar cada conclusión con captura, versión y hash.
+
+## Evita
+
+- Tratar una puntuación de similitud como prueba de vulnerabilidad.
+- Afirmar que se ejecutó Diaphora si el plugin no funcionó.
+- Publicar exportaciones o proyectos que incluyan material de terceros sin revisar permisos.
+- Subir resultados esperados como si fueran observaciones.
+- Ejecutar la versión deliberadamente vulnerable con entradas excesivas.

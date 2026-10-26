@@ -1,16 +1,13 @@
 # Documentación
 
-Esta carpeta contiene las guías técnicas, metodología, análisis y resultados del proyecto.
+Índice de guías y entregables del proyecto.
 
-Flujo a implementar
+- [Flujo de trabajo](flujo-de-trabajo.md): metodología para preparar, analizar y comparar los binarios.
+- [Plantilla del informe](informe-analisis.md): estructura para registrar resultados reales sin anticiparlos.
+- [Laboratorio](../lab/README.md): código y pruebas locales.
+- [Cheat sheet](../cheatsheet/guia-operativa.md): resumen operativo.
+- [Diagrama](../diagrams/flujo.md): flujo propuesto.
+- [Evidencias](../evidence/README.md): tabla de capturas, registros y observaciones.
+- [Referencias](../references/sources.md): documentación oficial y taxonomía.
 
-├── 01-alcance-y-autorizacion.md
-│   ├── 02-conceptos-binary-diffing.md
-│   ├── 03-entorno-de-laboratorio.md
-│   ├── 04-instalacion-diaphora.md
-│   ├── 05-workflow-ghidra-diaphora.md
-│   ├── 06-caso-practico-stack-buffer-overflow.md
-│   ├── 07-interpretacion-de-resultados.md
-│   ├── 08-limitaciones-y-falsos-positivos.md
-│   ├── 09-comparativa-bindiff-diaphora.md
-│   └── 10-recomendaciones-de-remediacion.md
+Las guías indican explícitamente qué pasos están propuestos y cuáles han sido ejecutados. No trates resultados esperados como observaciones reales.

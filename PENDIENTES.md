@@ -1,28 +1,35 @@
 # Pendientes para la entrega
 
-Material preparado no equivale a laboratorio realizado.
+Actualizado: 26 de octubre de 2026. Material preparado no equivale a pruebas ejecutadas. Prioriza un solo caso reproducible.
 
-## Prioridad 0
-- [ ] Confirmar acceso a IDA compatible con Diaphora y registrar versiones reales.
-- [ ] Ejecutar compilación y pruebas en una VM local; los scripts aún no están validados.
-- [ ] Resolver la discrepancia entre el texto MIT del README y CC BY-SA en LICENSE cuando el autor autorice revisar licencias. No se modifican ahora LICENSE, lab/LICENSE ni NOTICE.md.
+## Prioridad inmediata: tú en la VM
 
-## Laboratorio
-- [ ] Registrar distribución, arquitectura, compilador y opciones.
-- [ ] Guardar hashes, salidas y resultados reales.
-- [ ] Realizar comparación en Diaphora y análisis independiente en Ghidra.
-- [ ] Añadir capturas propias con versión, binario y explicación.
-- [ ] Ejecutar el segundo experimento de optimización.
+- [ ] Confirmar IDA y Diaphora instalados y registrar sus versiones.
+- [ ] Ejecutar `sh lab/build.sh`; revisar y conservar la salida.
+- [ ] Ejecutar `python3 lab/tests/check.py`; registrar resultados reales.
+- [ ] Completar SO, arquitectura, compilador, opciones y hashes en `evidence/README.md`.
+- [ ] Analizar ambos binarios en Ghidra y guardar capturas propias.
+- [ ] Si el entorno Diaphora funciona, comparar las dos muestras y guardar evidencia; si no, no afirmar que se realizó.
+- [ ] Compartir los logs y capturas para completar conclusiones con datos reales.
 
-## Documentación
-- [ ] Completar las guías con opciones reales de las versiones usadas.
-- [ ] Redactar informe de causa raíz, impacto acotado, corrección y limitaciones.
-- [ ] Comparar al menos una alternativa y justificar la selección.
-- [ ] Completar evidence/ con una tabla observación-evidencia-conclusión.
-- [ ] Revisar el antiguo cheatsheet/diaphora-cheatseet.md vacío y decidir su retirada o redirección; no se elimina en esta actualización.
-- [ ] Comprobar procedencia y permisos de las imágenes existentes antes de entregar; no se sustituyen ahora.
-- [ ] Completar referencias y atribuciones de recursos externos.
-- [ ] Revisar redacción, enlaces, datos sensibles y reproducibilidad desde un entorno limpio.
+## Puedo hacer con la evidencia
+
+- [ ] Revisar los logs y depurar errores de los scripts.
+- [ ] Completar `docs/informe-analisis.md` con observaciones comprobables.
+- [ ] Redactar comparación y limitaciones, sin atribuir al diff lo que no demuestra.
+- [ ] Revisar referencias, enlaces, redacción y consistencia del README.
+
+## Si queda tiempo
+
+- [ ] Ejecutar experimento de optimización `-O0` frente a `-O2`.
+- [ ] Comparar con Version Tracking de Ghidra o BinDiff y justificar la herramienta.
+- [ ] Comprobar procedencia y permisos de las imágenes existentes.
+- [ ] Repetir el laboratorio desde entorno limpio.
+
+## Licencias
+
+- [ ] Revisar en otra actualización la diferencia entre el texto del README y los archivos de licencia. Por petición del autor, `LICENSE`, `lab/LICENSE` y `NOTICE.md` no se han modificado.
 
 ## Criterio de finalización
-Otro analista debe poder reproducir el caso y relacionar cada conclusión con evidencia propia. No afirmar descubrimiento de zero-days ni asignación de CVE a partir de este ejemplo sintético.
+
+Un analista debe poder reproducir el caso con las versiones y opciones documentadas, y cada conclusión debe apuntar a evidencia propia. No afirmar descubrimiento de 0-day ni asignación de CVE a partir de este ejemplo sintético.
