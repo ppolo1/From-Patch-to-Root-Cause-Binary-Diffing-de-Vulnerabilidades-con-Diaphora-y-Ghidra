@@ -45,7 +45,7 @@ Consulta [references/sources.md](references/sources.md). La guía no depende de 
 - [Diagrama](diagrams/flujo.md)
 - [Anexos didácticos](lab/README.md)
 - [Límites de evidencia](evidence/README.md)
-- [Revisión editorial y ampliaciones](PENDIENTES.md)
+- [Ampliaciones futuras](AMPLIACIONES-FUTURAS.md)
 
 ## Licencia
 Consulta [LICENSE](LICENSE), [lab/LICENSE](lab/LICENSE) y [NOTICE.md](NOTICE.md). Los archivos de licencia no se modifican con esta reorientación.
