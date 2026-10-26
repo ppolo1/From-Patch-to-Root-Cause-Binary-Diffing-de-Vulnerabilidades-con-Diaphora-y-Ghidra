@@ -1,35 +1,21 @@
-# Pendientes para la entrega
+# Revisión editorial y ampliaciones futuras
 
-Actualizado: 26 de octubre de 2026. Material preparado no equivale a pruebas ejecutadas. Prioriza un solo caso reproducible.
+El proyecto se reorienta por decisión del autor a una guía predominantemente teórica. Esta decisión no acredita prácticas realizadas ni garantiza el cumplimiento del enfoque práctico del enunciado académico.
 
-## Prioridad inmediata: tú en la VM
+## Revisión antes de entregar
+- [ ] Leer y personalizar la explicación para poder defenderla.
+- [ ] Confirmar con el docente si acepta el cambio a un enfoque teórico; el enunciado original valora aplicación práctica y profundidad técnica.
+- [ ] Verificar procedencia y permisos de las imágenes previas.
+- [ ] Revisar las referencias y su correspondencia con lo explicado.
+- [ ] Comprobar enlaces y formato en GitHub.
+- [ ] Entregar la URL pública por el canal indicado por el docente.
 
-- [ ] Confirmar IDA y Diaphora instalados y registrar sus versiones.
-- [ ] Ejecutar `sh lab/build.sh`; revisar y conservar la salida.
-- [ ] Ejecutar `python3 lab/tests/check.py`; registrar resultados reales.
-- [ ] Completar SO, arquitectura, compilador, opciones y hashes en `evidence/README.md`.
-- [ ] Analizar ambos binarios en Ghidra y guardar capturas propias.
-- [ ] Si el entorno Diaphora funciona, comparar las dos muestras y guardar evidencia; si no, no afirmar que se realizó.
-- [ ] Compartir los logs y capturas para completar conclusiones con datos reales.
+## Ampliaciones opcionales, no resultados realizados
+- Validar la compatibilidad real de IDA y Diaphora.
+- Ejecutar compilación y pruebas en un entorno propio.
+- Añadir hashes, versiones, capturas y resultados observados.
+- Comparar optimizaciones y medir su efecto.
+- Realizar una evaluación práctica de alternativas.
 
-## Puedo hacer con la evidencia
-
-- [ ] Revisar los logs y depurar errores de los scripts.
-- [ ] Completar `docs/informe-analisis.md` con observaciones comprobables.
-- [ ] Redactar comparación y limitaciones, sin atribuir al diff lo que no demuestra.
-- [ ] Revisar referencias, enlaces, redacción y consistencia del README.
-
-## Si queda tiempo
-
-- [ ] Ejecutar experimento de optimización `-O0` frente a `-O2`.
-- [ ] Comparar con Version Tracking de Ghidra o BinDiff y justificar la herramienta.
-- [ ] Comprobar procedencia y permisos de las imágenes existentes.
-- [ ] Repetir el laboratorio desde entorno limpio.
-
-## Licencias
-
-- [ ] Revisar en otra actualización la diferencia entre el texto del README y los archivos de licencia. Por petición del autor, `LICENSE`, `lab/LICENSE` y `NOTICE.md` no se han modificado.
-
-## Criterio de finalización
-
-Un analista debe poder reproducir el caso con las versiones y opciones documentadas, y cada conclusión debe apuntar a evidencia propia. No afirmar descubrimiento de 0-day ni asignación de CVE a partir de este ejemplo sintético.
+## Material preservado
+Se mantienen los archivos de licencia, imágenes y ejemplos de código. Los scripts y pruebas son anexos didácticos, no un laboratorio acreditado. No se marcan tareas experimentales como completadas por haber cambiado el enfoque.

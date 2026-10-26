@@ -1,23 +1,20 @@
-# Ilustraciones del laboratorio
+# Ilustraciones conceptuales
 
-Estos esquemas originales explican cómo se propone ejecutar el proyecto en un laboratorio local. Son ilustraciones conceptuales, no capturas de Ghidra o Diaphora ni evidencias de que se hayan realizado las pruebas. No sustituyen los registros y capturas propias solicitados en el informe.
+Los siguientes esquemas explican un posible laboratorio profesional. Son ilustraciones originales de apoyo a la guía teórica, no capturas ni evidencia de pruebas realizadas.
 
-## Entorno de análisis
+## Arquitectura propuesta
 
-![Esquema conceptual de la VM y las herramientas](laboratorio-conceptual.svg)
+![Esquema conceptual de las herramientas](laboratorio-conceptual.svg)
 
-Los mismos binarios propios se analizan por separado en Ghidra y en IDA con Diaphora. No se representa una integración directa de Diaphora en Ghidra. La edición de IDA y la versión del plugin deben ser compatibles.
+Los mismos binarios podrían analizarse por separado con Ghidra y con IDA más Diaphora. No se representa integración directa entre Ghidra y Diaphora.
 
-## Cambio defensivo del ejemplo
+## Corrección del ejemplo
 
-![Comparación conceptual de la validación de longitud](comparacion-parche.svg)
+![Comparación conceptual de la validación](comparacion-parche.svg)
 
-La corrección propuesta valida la longitud antes de copiar. Las diferencias de ensamblador, direcciones, coincidencias y comportamiento observado deben documentarse tras compilar y analizar las muestras reales.
+La imagen resume el razonamiento sobre el fuente: validar longitud antes de copiar. No muestra resultados reales de comparación ni instrucciones concretas generadas por el compilador.
 
-## Versiones
+## Versiones y alcance
+La guía describe conceptos sin declarar una configuración instalada o verificada. Aunque el autor indica usar versiones estables recientes, los números exactos y la compatibilidad deberían registrarse en una futura reproducción. No se deducen a partir de la expresión «última estable».
 
-El autor indica que utiliza la última versión estable de los componentes. Declaración pendiente de completar con los números de versión instalados, edición de IDA, sistema operativo y fecha de ejecución. No implica que se haya verificado compatibilidad ni ejecución del laboratorio.
-
-## Uso en el informe
-
-Enlaza esta página desde la documentación o inserta los SVG con rutas relativas. Mantén siempre la indicación de que son esquemas ilustrativos. Las imágenes previas y los archivos de licencia no se modifican.
+Las imágenes anteriores y los archivos de licencia se mantienen sin cambios.

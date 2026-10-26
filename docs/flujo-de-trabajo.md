@@ -1,68 +1,33 @@
-# Flujo de trabajo: análisis de cambios entre binarios
+# Fundamentos y metodología de patch diffing
 
-**Estado:** guía de ejecución propuesta. Completa las versiones, observaciones y capturas durante tu propio laboratorio; no se han validado aquí.
+## Qué se compara
+El binary diffing compara representaciones de programas compilados para identificar correspondencias y diferencias. Cuando se aplica a versiones anteriores y posteriores a un parche, permite orientar una investigación hacia cambios potencialmente relevantes. No todos los cambios corresponden a seguridad.
 
-## 1. Alcance y entorno
+Conviene distinguir tres niveles: diferencia textual del fuente, diferencia en ensamblador y diferencia estructural entre funciones o bloques. Una modificación pequeña del fuente puede generar muchos cambios binarios por optimización o recompilación.
 
-- Trabaja con los dos ejecutables generados desde el código de `lab/src/`.
-- Usa una máquina local o VM aislada; no se requiere apuntar a un servicio remoto.
-- Registra sistema operativo, arquitectura, compilador y opciones de compilación.
-- Registra las versiones de Ghidra, IDA y Diaphora realmente usadas.
-- Confirma compatibilidad con la documentación oficial de la versión instalada.
+## Papel de las herramientas
+Ghidra sirve para estudiar código, funciones y referencias. Diaphora es una herramienta de comparación cuyo flujo documentado utiliza IDA y exportaciones SQLite. Los mismos binarios pueden estudiarse independientemente con Ghidra y compararse en IDA con Diaphora; eso no constituye una integración directa entre ambas herramientas.
 
-Ghidra y Diaphora no se consideran una integración directa. Ghidra puede usarse para estudiar los binarios. Diaphora es un plugin de IDA, así que la comparación de Diaphora requiere un IDA compatible y sus propias exportaciones.
+## Flujo conceptual
+1. Definir la pregunta: qué cambió y qué comportamiento podría evitar.
+2. Seleccionar dos versiones comparables y conocer procedencia, arquitectura y contexto de compilación.
+3. Identificar puntos de entrada, funciones y datos relevantes.
+4. Emparejar funciones entre versiones y revisar las diferencias de interés.
+5. Buscar controles nuevos, rutas de rechazo y cambios en operaciones sensibles.
+6. Contrastar explicaciones alternativas antes de atribuir el cambio a seguridad.
+7. Separar observación, hipótesis y validación.
 
-## 2. Compilar y registrar
+## Lectura de un resultado hipotético
+Una función equivalente en ambas versiones que incorpora una condición antes de copiar datos sería candidata a revisión. La pregunta no sería solo si cambió, sino qué condición controla, qué ocurre cuando se incumple y si la operación peligrosa sigue siendo alcanzable. No se atribuyen aquí puntuaciones, direcciones ni resultados reales a este ejemplo.
 
-Desde la raíz del repositorio:
+## Limitaciones
+- Compilador, arquitectura, enlazado y optimización pueden introducir ruido.
+- Símbolos eliminados, inlining u ofuscación dificultan emparejar funciones.
+- El descompilado es una representación de análisis, no el fuente original garantizado.
+- Una coincidencia automática puede necesitar revisión manual.
+- Un cambio no demuestra vulnerabilidad; un crash no demuestra control de ejecución.
 
-```sh
-sh lab/build.sh
-python3 lab/tests/check.py
-```
+## Uso profesional y validación futura
+Esta metodología puede orientar revisión de actualizaciones, análisis de firmware autorizado y estudio de correcciones. Una aplicación práctica futura requeriría documentar versiones, hashes, opciones y evidencias reproducibles. Aquí se describe el método, no su ejecución.
 
-Revisa las salidas antes de afirmar que las pruebas pasaron. El script de construcción crea `lab/build/environment.txt` y `lab/build/SHA256SUMS`. Registra además el sistema y las versiones en `evidence/README.md`. No uses los binarios de laboratorio para probar sistemas ajenos.
-
-## 3. Análisis independiente en Ghidra
-
-1. Crea un proyecto local y separado para este laboratorio.
-2. Importa `lab/build/vulnerable` y `lab/build/fixed`.
-3. Confirma el formato, la arquitectura y los resultados del análisis automático.
-4. Localiza `main` y `copy_input` si el compilador conserva esos símbolos; de lo contrario, documenta cómo identificaste las funciones.
-5. En la versión vulnerable, observa la copia a `buffer` y la ausencia de una comprobación previa de longitud.
-6. En la versión corregida, identifica la comprobación y la ruta de rechazo.
-7. Guarda capturas propias y apunta direcciones, nombres y observaciones reales.
-
-Las capturas deben mostrar el nombre de la muestra y la versión de Ghidra. Oculta datos personales del escritorio.
-
-## 4. Comparación con Diaphora
-
-1. Abre cada ejecutable en una versión de IDA compatible con el plugin instalado.
-2. Espera a que termine el análisis automático de ambas muestras.
-3. Sigue el procedimiento de exportación y comparación documentado por la versión instalada de Diaphora; el flujo usa exportaciones SQLite.
-4. Registra nombres de exportaciones, opciones, versión y resultado.
-5. Revisa las coincidencias y diferencias de funciones; confirma las funciones relevantes en desensamblado.
-6. Contrasta esas observaciones con el análisis independiente de Ghidra y el código fuente.
-
-No cargues proyectos nativos de Ghidra en Diaphora ni llames a archivos IDB/I64 exportaciones SQLite. Si el plugin no aparece, falla o tu edición de IDA no es compatible, registra el problema y no afirmes que se ejecutó el diff.
-
-## 5. Interpretación y reporte
-
-Para cada cambio potencialmente relevante responde:
-
-- ¿Qué función o bloque cambió?
-- ¿Qué validación nueva aparece en la versión corregida?
-- ¿Qué entrada de laboratorio permite comprobar el comportamiento?
-- ¿Qué evidencia respalda la interpretación?
-- ¿Qué otras causas —compilador, optimización o símbolos— pueden explicar diferencias?
-- ¿Qué no puede concluirse únicamente a partir del diff?
-
-Una puntuación de similitud o una función diferente sirve para priorizar revisión, no para confirmar vulnerabilidad o explotabilidad.
-
-## 6. Evidencias y cierre
-
-Completa `docs/informe-analisis.md` y `evidence/README.md`. Conserva capturas originales y no inventes resultados. Añade hash del binario para relacionar cada evidencia con la muestra analizada.
-
-## Alternativas
-
-Si Diaphora no resulta viable, Ghidra dispone de Version Tracking para identificar correspondencias entre versiones de programas. También puedes estudiar BinDiff, verificando antes sus requisitos y exportadores. Si cambias de herramienta, actualiza el título y el alcance del proyecto para reflejar el flujo realmente realizado.
+Fuentes: [referencias](../references/sources.md).

@@ -1,32 +1,13 @@
-# Registro de evidencias
+# Alcance de la evidencia
 
-Esta tabla se completa después de ejecutar el laboratorio. No incluye resultados inferidos ni capturas de terceros.
+El repositorio es una guía teórica y no aporta una validación experimental del flujo completo. No contiene resultados de ejecución acreditados, hashes de muestras efectivamente analizadas ni capturas de una campaña realizada.
 
-## Entorno y archivos
+## Material disponible
+- Fuentes didácticos que permiten explicar un cambio defensivo.
+- Referencias documentales sobre capacidades de herramientas.
+- Esquemas originales expresamente conceptuales.
 
-| Elemento | Valor real | Evidencia / ruta |
-|---|---|---|
-| SO y versión | [pendiente] | [pendiente] |
-| Arquitectura | [pendiente] | [pendiente] |
-| Compilador y versión | [pendiente] | [pendiente] |
-| Ghidra | [pendiente] | [pendiente] |
-| IDA | [pendiente/no usado] | [pendiente] |
-| Diaphora | [pendiente/no usado] | [pendiente] |
-| SHA-256 vulnerable | [pendiente] | `lab/build/SHA256SUMS` |
-| SHA-256 corregido | [pendiente] | `lab/build/SHA256SUMS` |
+No deben confundirse estos elementos con evidencia de ejecución. No se completan tablas con direcciones, puntuaciones, versiones o resultados inventados.
 
-## Observaciones
-
-| ID | Evidencia | Observación directa | Interpretación | Límite |
-|---|---|---|---|---|
-| O-01 | [captura o registro] | [qué se ve, sin inferencias] | [qué sugiere] | [qué no demuestra] |
-
-## Capturas por obtener
-
-- [ ] Compilación y pruebas de regresión.
-- [ ] Función `copy_input` en la muestra vulnerable.
-- [ ] Validación y ruta de rechazo en la muestra corregida.
-- [ ] Resultado del diff con Diaphora e IDA compatible, o herramienta alternativa declarada.
-- [ ] Identificación de hashes y versiones.
-
-Guarda las capturas originales aquí con nombres descriptivos, por ejemplo `01-build-tests.png`. No publiques credenciales, datos personales ni rutas locales sensibles.
+## Ampliación futura
+Una eventual validación práctica podría incluir versiones exactas, hashes, opciones de compilación, capturas propias y una tabla de observación, interpretación y límites. Se considera ampliación futura, no trabajo realizado ni condición para leer esta guía.

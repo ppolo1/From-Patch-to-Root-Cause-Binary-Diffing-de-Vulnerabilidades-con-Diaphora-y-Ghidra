@@ -1,13 +1,11 @@
-# Documentación
+# Índice de la guía teórica
 
-Índice de guías y entregables del proyecto.
+1. [Metodología y fundamentos](flujo-de-trabajo.md).
+2. [Ejemplo razonado y causa raíz](informe-analisis.md).
+3. [Comparativa y elección de herramientas](comparativa.md).
+4. [Cheat sheet de consulta](../cheatsheet/guia-operativa.md).
+5. [Ilustraciones conceptuales](../images/LABORATORIO.md).
+6. [Anexos didácticos opcionales](../lab/README.md).
+7. [Referencias](../references/sources.md).
 
-- [Flujo de trabajo](flujo-de-trabajo.md): metodología para preparar, analizar y comparar los binarios.
-- [Plantilla del informe](informe-analisis.md): estructura para registrar resultados reales sin anticiparlos.
-- [Laboratorio](../lab/README.md): código y pruebas locales.
-- [Cheat sheet](../cheatsheet/guia-operativa.md): resumen operativo.
-- [Diagrama](../diagrams/flujo.md): flujo propuesto.
-- [Evidencias](../evidence/README.md): tabla de capturas, registros y observaciones.
-- [Referencias](../references/sources.md): documentación oficial y taxonomía.
-
-Las guías indican explícitamente qué pasos están propuestos y cuáles han sido ejecutados. No trates resultados esperados como observaciones reales.
+Alcance: revisión conceptual de capacidades, metodología y límites. No se acredita una campaña de pruebas ni resultados de ejecución.

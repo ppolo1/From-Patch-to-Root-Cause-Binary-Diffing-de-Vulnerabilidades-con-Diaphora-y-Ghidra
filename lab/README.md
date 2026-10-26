@@ -1,29 +1,15 @@
-# Laboratorio local
+# Anexos didácticos de código
 
-Estado: código y scripts preparados, no ejecutados ni validados todavía. Plataforma prevista: Linux con compilador C y Python 3. No es un laboratorio de explotación ni incluye payloads.
+Esta carpeta conserva ejemplos de fuente y automatización como apoyo opcional a la guía teórica. Su presencia no indica que el laboratorio se haya ejecutado ni que las pruebas estén validadas. No es necesario ejecutarlos para seguir la explicación conceptual.
 
-## Objetivo
-Comparar una copia sin validación de longitud con una que rechaza entradas de 32 bytes o más antes de copiar. La implementación vulnerable usa strcpy deliberadamente; no reutilizar en producción.
+- `src/vulnerable.c`: copia sin control previo de longitud.
+- `src/fixed.c`: versión con validación previa bajo los supuestos del ejemplo.
+- `build.sh`: propuesta de compilación local.
+- `tests/check.py`: propuesta de pruebas seleccionadas, no prueba de explotabilidad.
 
-Desde la raíz del repositorio:
+La explicación está en [el caso teórico](../docs/informe-analisis.md).
 
-```sh
-sh lab/build.sh
-python3 lab/tests/check.py
-```
+## Reproducción futura opcional
+Los scripts existentes se orientan a Linux y no se presentan como validados. Cualquier ejecución futura requiere revisar el código, registrar versiones y utilizar un entorno propio controlado. El ejemplo vulnerable no debe usarse en producción ni ejecutarse con entradas excesivas fuera de un laboratorio autorizado.
 
-Los scripts usan rutas relativas a su propia ubicación. El directorio lab/build/ contendrá ejecutables, hashes y registro del compilador. No se deshabilitan explícitamente las protecciones del sistema. La compilación se realiza para la arquitectura nativa; registra cuál es. No ejecutes las pruebas como root ni fuera del entorno controlado.
-
-## Casos propuestos
-- Entrada corta: ambas versiones imprimen la entrada.
-- 31 bytes ASCII: ambas versiones deberían aceptarlos.
-- 32 bytes ASCII: la versión corregida debe rechazarlos con estado 2.
-- 64 bytes ASCII: la versión corregida debe rechazarlos con estado 2.
-
-Las pruebas excesivas se ejecutan solo sobre la versión corregida. La versión vulnerable se prueba únicamente con entradas que caben en el búfer. No se presupone ningún crash: un desbordamiento produce comportamiento indefinido y su efecto depende del entorno.
-
-## Análisis
-Compara los binarios con Ghidra y Diaphora siguiendo docs/flujo-de-trabajo.md. Explica el nuevo control previo a strcpy y la ruta de error. No presentes la corrección como una solución universal para cualquier tipo de entrada o problema de memoria.
-
-## Pendientes
-Registrar versiones y resultados reales, añadir capturas, verificar reproducibilidad y completar el informe. El código original de esta carpeta se rige por lab/LICENSE, que no se modifica.
+`LICENSE` conserva su contenido. No se han eliminado ni modificado los fuentes, scripts o pruebas con esta reorientación.

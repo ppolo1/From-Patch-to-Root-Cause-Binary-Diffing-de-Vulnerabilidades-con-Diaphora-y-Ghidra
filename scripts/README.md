@@ -1,16 +1,7 @@
-# Scripts auxiliares
+# Anexos de automatización opcionales
 
-## `analyze-ghidra.sh`
+`analyze-ghidra.sh` se conserva como ejemplo de invocación del análisis headless de Ghidra sobre archivos locales. No constituye una integración con Diaphora ni un resultado experimental.
 
-Invoca el analizador headless de Ghidra sobre una muestra local para importar el binario a un proyecto. No ejecuta el binario ni realiza fuzzing, explotación o acceso de red.
+El repositorio es predominantemente teórico. No se requiere ejecutar este script para consultar la guía y no se declara validado en una combinación concreta de versiones. Una futura reproducción deberá revisar sus argumentos, requisitos, permisos y comportamiento en la versión instalada.
 
-Uso desde la raíz del repositorio:
-
-```sh
-GHIDRA_HEADLESS=/ruta/a/ghidra/support/analyzeHeadless \
-  sh scripts/analyze-ghidra.sh lab/build/vulnerable lab/ghidra-project
-```
-
-Configura `GHIDRA_HEADLESS` con la ruta real de tu instalación. Comprueba `analyzeHeadless --help` y ajusta la sintaxis a la versión instalada antes de usarlo. El script no se ha ejecutado ni validado en este proyecto; si da error, usa la interfaz gráfica de Ghidra y documenta los pasos manuales.
-
-El proyecto generado puede contener datos derivados del análisis. No lo publiques sin revisar tamaño, contenido y rutas locales.
+No se ha modificado el script ni se han ejecutado muestras con esta actualización.

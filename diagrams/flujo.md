@@ -1,15 +1,19 @@
-# Flujo propuesto de análisis
+# Metodología conceptual de análisis
 
-Diagrama propio. No representa resultados experimentales ni una integración directa entre Ghidra y Diaphora.
+Este esquema representa decisiones de un analista, no resultados experimentales.
 
 ```mermaid
 flowchart TD
-    A[Binarios propios y alcance autorizado] --> B[Compilar y registrar versiones y hashes]
-    B --> C[Analizar ambos binarios en Ghidra]
-    C --> D{IDA compatible disponible}
-    D -->|No| E[Documentar bloqueo y revisar alcance]
-    D -->|Sí| F[Analizar en IDA y exportar con Diaphora]
-    F --> G[Comparar y revisar funciones]
-    G --> H[Contrastar hipótesis con pruebas locales]
-    H --> I[Informe con evidencias y limitaciones]
+    A[Dos versiones propias o autorizadas] --> B[Contexto y comparabilidad]
+    B --> C[Análisis independiente con Ghidra]
+    C --> D{Flujo compatible con Diaphora disponible}
+    D -->|Sí| E[Comparación desde IDA]
+    D -->|No| F[Estudiar alternativas y declarar el alcance]
+    E --> G[Revisión manual de diferencias]
+    F --> G
+    G --> H[Hipótesis sobre la corrección]
+    H --> I[Conclusión teórica y límites]
+    H -. Validación futura opcional .-> J[Pruebas y evidencias reproducibles]
 ```
+
+La representación no implica que Diaphora importe directamente proyectos de Ghidra.
